@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: youtube_raw
+    database: youtube-trending-kx26
+    schema: youtube_trending_data
+    tables:
+      - name: raw_youtube_US
+      - name: raw_youtube_GB
+      - name: raw_youtube_CA
+      - name: raw_youtube_DE
