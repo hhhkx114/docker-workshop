@@ -66,7 +66,8 @@ Built an interactive dashboard with:
 - Hourly bar chart of overall publishing patterns
 - Country dropdown filter for cross-market comparison
 
-[*Insert dashboard screenshot here*]
+<img width="1136" height="878" alt="image" src="https://github.com/user-attachments/assets/1da6c0cd-a97c-4f02-83ce-92847f0ddc54" />
+
 
 ## 🔍 Key Findings
 
