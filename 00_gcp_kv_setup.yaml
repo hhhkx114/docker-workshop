@@ -1,0 +1,24 @@
+id: gcp_kv_setup
+namespace: youtube.setup
+
+tasks:
+  - id: set_project_id
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_PROJECT_ID
+    value: "youtube-trending-kx26"
+
+  - id: set_gcs_bucket
+    type: io.kestra.plugin.core.kv.Set
+    key: GCS_BUCKET
+    value: "youtube-trending-bucket"
+
+  - id: set_bq_dataset
+    type: io.kestra.plugin.core.kv.Set
+    key: BQ_DATASET
+    value: "youtube_trending_data"
+
+  - id: set_gcp_creds
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_CREDS
+    value: | #json_key
+      
