@@ -104,7 +104,7 @@ youtube-trending-pipeline/
 1. Clone this repo
 2. Create a GCP project and service account with BigQuery Admin + Storage Admin roles
 3. Run `terraform init && terraform apply` in the `terraform/` folder
-4. Download the dataset from Kaggle and preprocess CSVs to JSON (see `scripts/` folder)
+4. Download the dataset from Kaggle and preprocess CSVs to JSON
 5. Upload preprocessed files to GCS: `gcloud storage cp *.json gs://your-bucket/raw/`
 6. Start Kestra: `cd kestra && docker compose up -d`
 7. Configure KV secrets and run the loading flow for each country
