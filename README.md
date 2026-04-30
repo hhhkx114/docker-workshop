@@ -26,7 +26,6 @@ Content creators want to know the optimal timing to publish videos for maximum r
 | Transformation | dbt Cloud |
 | Visualization | Looker Studio |
 | Version Control | Git / GitHub |
-| Languages | Python, SQL, YAML, HCL |
 
 ## 📊 Dataset
 
