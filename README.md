@@ -77,6 +77,8 @@ Built an interactive dashboard with:
 - **Cross-country patterns:** Similar hourly trends across US/GB/CA/DE suggest the "afternoon peak" pattern is universal in Western markets
 
 ## 📂 Project Structure
+
+```
 youtube-trending-pipeline/
 ├── terraform/          # IaC for GCS bucket and BigQuery dataset
 ├── kestra/             # Docker Compose and flow YAMLs
@@ -87,6 +89,7 @@ youtube-trending-pipeline/
 │   │   └── marts/
 │   └── seeds/
 └── README.md
+```
 
 ## 🚀 How to Reproduce
 
