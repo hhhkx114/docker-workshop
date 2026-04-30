@@ -12,9 +12,8 @@ Content creators want to know the optimal timing to publish videos for maximum r
 
 ## 🏗️ Architecture
 
-Kaggle CSVs → Local preprocessing (Python) → Google Cloud Storage (Data Lake)
-→ BigQuery (Raw Layer, via Kestra) → dbt (Staging → Intermediate → Mart)
-→ Looker Studio (Dashboard)
+<img width="1026" height="210" alt="image" src="https://github.com/user-attachments/assets/1e187e98-68c4-41b7-9039-235610edb5e5" />
+
 
 ## 🛠️ Tech Stack
 
