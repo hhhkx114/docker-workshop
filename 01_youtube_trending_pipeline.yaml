@@ -1,0 +1,19 @@
+id: youtube_trending_pipeline
+namespace: youtube.setup
+
+inputs:
+  - id: country_code
+    type: STRING
+    defaults: "US"
+
+tasks:
+  - id: load_to_bq
+    type: io.kestra.plugin.gcp.bigquery.LoadFromGcs
+    projectId: "{{ kv('GCP_PROJECT_ID') }}"
+    destinationTable: "{{ kv('GCP_PROJECT_ID') }}.{{ kv('BQ_DATASET') }}.raw_youtube_{{ inputs.country_code }}"
+    from:
+      - "gs://{{ kv('GCS_BUCKET') }}/raw/{{ inputs.country_code }}/videos.json"
+    format: JSON
+    autodetect: true
+    writeDisposition: WRITE_TRUNCATE
+    serviceAccount: "{{ kv('GCP_CREDS') }}"
