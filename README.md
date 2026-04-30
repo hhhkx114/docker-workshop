@@ -113,15 +113,13 @@ youtube-trending-pipeline/
 
 ## 💡 Lessons Learned
 
-- **Data quality first**: CSV parsing ambiguity cost me hours — preprocessing to JSON was the right call
-- **Separation of concerns via dbt layers** makes changes safer and the codebase more maintainable
-- **Secrets management matters**: Using Kestra's KV store (vs. hardcoding credentials) is non-negotiable, even for portfolio projects
-- **Git workflow discipline**: Even working solo, using feature branches and pull requests builds good habits
+- **End-to-end pipeline experience**: This was my first time building a complete data engineering pipeline from infrastructure to dashboard. Each tool taught me something different — Terraform for declarative infrastructure, Kestra for orchestration thinking, dbt for SQL discipline, and the importance of every layer working together
+- **Data quality first**: CSV parsing ambiguity cost me hours of debugging — preprocessing messy CSVs to clean JSON via pandas was the right call. Production pipelines need defensive data handling
 
 ## 📝 Future Improvements
 
-- Extend to all 10 countries in the dataset
-- Add dbt tests (unique/not_null/accepted_values) for data quality enforcement
-- Schedule daily pipeline runs via Kestra triggers
-- Add CI/CD with GitHub Actions for dbt model validation on PRs
-- Expand analysis to include tag/title NLP for content optimization insights
+- **Full Kestra orchestration**: Currently I run dbt manually via dbt Cloud. A more production-like setup would have Kestra trigger dbt builds as part of the same flow, creating a true end-to-end orchestrated pipeline
+- **Scheduled pipeline runs**: Add Kestra triggers to run the pipeline on a daily schedule (this dataset is updated daily on Kaggle)
+- **Streaming alongside batch**: Currently this is purely batch ELT. A natural extension would be to ingest YouTube API data in near-real-time via streaming (e.g., Pub/Sub + Dataflow) for live trending updates
+- **Add dbt tests** (unique, not_null, accepted_values) for data quality enforcement
+
